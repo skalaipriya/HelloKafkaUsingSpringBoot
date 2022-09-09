@@ -1,0 +1,13 @@
+server:
+  port: 8081
+debug: true
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 192.168.0.108:53079
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      bootstrap-servers: 192.168.0.108:53079
+      group_id: group_1
